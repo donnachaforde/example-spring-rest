@@ -80,10 +80,10 @@ public class SwaggerConfig implements EnvironmentAware
     }
 
     /**
-     * Swagger Springfox configuration.
+     * Swagger SpringFox configuration.
      */
     @Bean
-    public Docket swaggerSpringfoxDocket()
+    public Docket swaggerSpringFoxDocket()
     {
         Log.debug("Starting Swagger");
         StopWatch stopWatch = new StopWatch();
@@ -120,7 +120,7 @@ public class SwaggerConfig implements EnvironmentAware
     }
 
     /**
-     * Global header for REST API's
+     * Global header for REST APIs
      */
     private List<Parameter> httpHeader()
     {
