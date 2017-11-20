@@ -74,12 +74,12 @@ public class InMemoryStore implements Store
         this.insertRecord("3fc92a17-f774-49c2-9026-437214222ee0", 051.0, 42.374967, -71.116676, "Thayer Hall, Harvard University, Main Entrance, MA, USA");
     }
 
-    private void insertRecord(String strUUID, double altitude, double longitude, double latitude, String strRelativeLocation)
+    private void insertRecord(String strUUID, double altitude, double latitude, double longitude, String strRelativeLocation)
     {
         // populate the store
         UUID uuid = UUID.fromString(strUUID);
-        GPSCoordinates coordinates = new GPSCoordinates(longitude, latitude);
-        Location panelLocation = new Location(coordinates, altitude, strRelativeLocation);
+        GPSCoordinates coordinates = new GPSCoordinates(latitude, longitude);
+        Location panelLocation = Location.createInstance(coordinates, altitude, strRelativeLocation);
 
         this.panelLocations.put(uuid, panelLocation);
     }
@@ -112,7 +112,7 @@ public class InMemoryStore implements Store
     }
 
     /**
-     * Get a list of all the unique identifers
+     * Get a list of all the unique identifiers
      *
      * @return list of UUIDs stored on the system
      */
