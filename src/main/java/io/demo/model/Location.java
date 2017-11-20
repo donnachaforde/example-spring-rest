@@ -15,7 +15,7 @@ public class Location implements ILocation
     //-------------------------------------------------------------------------
     // member vars
 
-    // GPS coordiantes of panel
+    // GPS coordinates of panel
     private GPSCoordinates coordinates;
 
     // altitude above sea level
@@ -35,7 +35,7 @@ public class Location implements ILocation
     {
     }
 
-    public Location(GPSCoordinates coordinates, double altitude, String strRelativeLocation)
+    protected Location(GPSCoordinates coordinates, double altitude, String strRelativeLocation)
     {
         this.coordinates = coordinates;
         this.altitude = altitude;
