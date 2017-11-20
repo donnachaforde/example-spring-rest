@@ -28,7 +28,7 @@
 
     <dependencies>
 
-        <!--springboot-->
+        <!--SpringBoot-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -45,7 +45,7 @@
         <dependency>
         	<groupId>com.google.guava</groupId>
         	<artifactId>guava</artifactId>
-        	<version>18.0</version>
+        	<version>19.0</version>
         </dependency>
 
         <!--swagger ui for spring -->
@@ -97,7 +97,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <!--explicity declare the JDK version to be used by Maven-->
+            <!--explicitly declare the JDK version to be used by Maven-->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
