@@ -16,34 +16,34 @@ public class GPSCoordinates
     //-------------------------------------------------------------------------
     // member vars
 
-    // GPS longitude, in decimal format
-    private double longitude;
-
     // GPS latitude, in decimal format
     private double latitude;
+
+    // GPS longitude, in decimal format
+    private double longitude;
 
 
     //-------------------------------------------------------------------------
     // construction
 
-    public GPSCoordinates(double longitude, double latitude)
+    public GPSCoordinates(double latitude, double longitude)
     {
-        this.longitude = longitude;
         this.latitude = latitude;
+        this.longitude = longitude;
     }
 
 
     //-------------------------------------------------------------------------
     // interface implementation
 
+    public double getLatitude()
+    {
+        return this.latitude;
+    }
 
     public double getLongitude()
     {
         return this.longitude;
     }
 
-    public double getLatitude()
-    {
-        return this.latitude;
-    }
 }
