@@ -6,6 +6,7 @@ package io.demo.store;
 import io.demo.model.ILocation;
 
 import java.util.Collection;
+import java.util.Map;
 import java.util.UUID;
 
 /**
@@ -17,6 +18,22 @@ import java.util.UUID;
 public interface Store
 {
     /**
+     * Get a list of all the unique identifiers
+     *
+     * @return list of UUIDs stored on the system
+     */
+    Collection<UUID> getKeys();
+
+
+    /**
+     * Get a list of all locations
+     *
+     * @return list of all locations, or an empty collection if none recorded
+     */
+    Collection<ILocation> getValues();
+
+
+    /**
      * Get location by UUID
      *
      * @param uuid UUID
@@ -27,17 +44,9 @@ public interface Store
 
 
     /**
-     * Get a list of all locations
+     * Get the list of key/value id/locations for panels
      *
-     * @return list of all locations, or an empty collection if none recorded
+     * @return Map of ID to location
      */
-    Collection<ILocation> getAllLocations();
-
-
-    /**
-     * Get a list of all the unique identifiers
-     *
-     * @return list of UUIDs stored on the system
-     */
-    Collection<UUID> getAllIds();
+    Map<UUID, ILocation> getLocations();
 }

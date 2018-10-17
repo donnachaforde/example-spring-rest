@@ -106,7 +106,7 @@ public class InMemoryStore implements Store
      * @return list of all locations, or an empty collection if none recorded
      */
     @Override
-    public Collection<ILocation> getAllLocations()
+    public Collection<ILocation> getValues()
     {
         return this.panelLocations.values();
     }
@@ -117,9 +117,19 @@ public class InMemoryStore implements Store
      * @return list of UUIDs stored on the system
      */
     @Override
-    public Collection<UUID> getAllIds()
+    public Collection<UUID> getKeys()
     {
         return this.panelLocations.keySet();
     }
 
+    /**
+     * Get the list of key/value id/locations for panels
+     *
+     * @return Map of ID to location
+     */
+    @Override
+    public Map<UUID, ILocation> getLocations()
+    {
+        return this.panelLocations;
+    }
 }
