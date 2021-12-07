@@ -38,14 +38,14 @@
         <dependency>
         	<groupId>junit</groupId>
         	<artifactId>junit</artifactId>
-        	<version>4.11</version>
+        	<version>4.13.2</version>
         </dependency>
 
         <!--Google Guava-->
         <dependency>
         	<groupId>com.google.guava</groupId>
         	<artifactId>guava</artifactId>
-        	<version>19.0</version>
+        	<version>31.0.1-jre</version>
         </dependency>
 
         <!--swagger ui for spring -->
