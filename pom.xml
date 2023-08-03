@@ -19,7 +19,6 @@
     <properties>
         <java.version>1.8</java.version>
         <junit.version>4.11</junit.version>
-        <guava.version>18.0</guava.version>
         <springfox.version>2.2.2</springfox.version>
         <swagger-maven-plugin.version>3.1.2</swagger-maven-plugin.version>
         <generated-docs-base>${project.build.directory}/generated/</generated-docs-base>
@@ -45,7 +44,7 @@
         <dependency>
         	<groupId>com.google.guava</groupId>
         	<artifactId>guava</artifactId>
-        	<version>31.0.1-jre</version>
+        	<version>32.1.2-jre</version>
         </dependency>
 
         <!--swagger ui for spring -->
